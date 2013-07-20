@@ -1,0 +1,188 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><meta http-equiv="Content-Type" content="text/html;charset=iso-8859-1">
+<title>IAnimatedMeshSceneNode.h Source File</title>
+<link href="doxygen.css" rel="stylesheet" type="text/css">
+</head><body>
+<table width="100%" border="0" cellspacing="0" cellpadding="2" bgcolor="#5A5E9D">
+  <tr> 
+    <td width="0"><small><a href="http://www.irrlicht.sourceforge.net" target="_blank"><img src="media/irrlichtlogo.jpg" alt="The Irrlicht Engine" align="middle" border=0 width=88 height=31></a></small></td>
+    <td width="100%"><b><font color="#FFFFFF">The Irrlicht Engine SDK version 
+      0.1</font></b></td>
+  </tr>
+</table>
+<hr>
+<p>Welcome the The first Irrlicht Engine SDK release. This is an alpha version 
+  of the SDK. So please note that there are features missing in the engine and 
+  maybe also some bugs.</p>
+<p> Content of this file:</p>
+<p> <a href="#1">1. Where to find what</a><br>
+  <a href="#2">2. How to start<br>
+  </a><a href="#3">3. Release Notes</a><br>
+  <a href="#4">4. License</a><br>
+  <a href="#5">5. Contact</a></p>
+<hr>
+<h2><a name="1"></a>1. Where to find what<br>
+</h2>
+<p> You will find some directories after decompressing the archive in which came 
+  the SDK. These are:</p>
+<table border="1" cellspacing="2" cellpadding="5" width="500">
+  <tr>
+    <td>\bin</td>
+    <td>The compiled library Irrlicht.DLL and some compiled demo and example applications, 
+      just start them to see the Irrlicht Engine in action.</td>
+  </tr>
+  <tr>
+    <td>\doc</td>
+    <td>Documentation of the Irrlicht Engine.</td>
+  </tr>
+  <tr>
+    <td>\examples</td>
+    <td>Examples and tutorials showing how to use the engine. </td>
+  </tr>
+  <tr>
+    <td>\include</td>
+    <td>Header files to include when using the engine.</td>
+  </tr>
+  <tr>
+    <td>\lib</td>
+    <td>Lib to link with your programs when using the engine.</td>
+  </tr>
+  <tr>
+    <td>\media</td>
+    <td>Graphics and sound data for the demo applications and examples.</td>
+  </tr>
+  <tr>
+    <td>\source</td>
+    <td>The source code of the Irrlicht Engine. This code is not needed to develop 
+      applications with the engine, but it is included to let you be able to recompile 
+      and debug it, if necessary. </td>
+  </tr>
+</table>
+<p></p>
+<hr>
+<h2><a name="2"></a>2. How to start<br>
+</h2>
+<p>To see the engine in action, just go to the \bin directory, and start some 
+  applications. There should also be an application named TechDemo.exe, this should 
+  show the most interesting things.<br>
+  <br>
+  To start developing own applications and games with the engine take a look at 
+  the 1.HelloWorld example in the \examples directory.<br>
+  There will also be a .html file with an easy to understand tutorial.<br>
+</p>
+<hr>
+<h2><a name="3"></a>4. Release Notes</h2>
+<p>This is an alpha version of the SDK. So please note that there are features 
+  missing in the engine and maybe also some bugs. The following list is a complete 
+  list of parts of this alpha SDK which do not work 100% correct. All other parts 
+  which can be found in the documentation and accessed with the Irrlicht header 
+  files work and can already be used. </p>
+<table border="1" cellspacing="2" cellpadding="2">
+  <tr> 
+    <td>OpenGL Device</td>
+    <td>The OpenGL Device is currently only able to load textures and draw basic 
+      3D primitives. No 2D functions, complex materials and dynamic light are 
+      implemented. Please use the DirectX8 or the Software Device instead. In 
+      the next release (0.2) the OpenGL device will be complete.</td>
+  </tr>
+  <tr> 
+    <td>Software Device</td>
+    <td>Dynamic lighting, multitexturing, 3d clipping and bilinear filtering are 
+      not implemented because the Software Device was intented to to only 2d functions, 
+      the primitive 3d functions are only an addition. Until the first non beta 
+      release (1.0) of the Engine, some more 3d functionality will be added.</td>
+  </tr>
+  <tr> 
+    <td>BspTree</td>
+    <td>The binary space partition scene node does not work correctly and has 
+      some bugs in it, which might lead to crashes. Please use the OctTree scene 
+      node instead. There is nearly no difference between the interface of them.</td>
+  </tr>
+  <tr> 
+    <td>MeshViewerGUIElement</td>
+    <td>The camera control of this element is currently disabled.</td>
+  </tr>
+  <tr> 
+    <td>FileOpenDialog</td>
+    <td>Not all functions are implemented.</td>
+  </tr>
+  <tr> 
+    <td>Render to Texture support</td>
+    <td>Is not implemented yet. All devices will ignore a setRenderTarget() call. 
+    </td>
+  </tr>
+  <tr> 
+    <td>MS3D Skeletal Animation</td>
+    <td>A loaded mesh is currently not animated and only drawn static.</td>
+  </tr>
+  <tr> 
+    <td>Quake 3 maps</td>
+    <td>No support for curved surfaces and scripted materials yet.</td>
+  </tr>
+  <tr>
+    <td>Linux Support</td>
+    <td>The engine currently only runs with Windows platforms. A linux version 
+      will be available somewhere between the versions 0.4 and 0.5, it depends 
+      on the need of the users. Please contact me, if you would like to have a 
+      linux version earlier.</td>
+  </tr>
+</table>
+<br>
+<hr>
+<h2><a name="4"></a>4. License</h2>
+<p>The license of the Irrlicht Engine is based on the zlib/libpng license. Even 
+  though this license does not require you to mention that you are using the Irrlicht 
+  Engine in your product, an acknowledgement somewhere would be highly appreciated.</p>
+<h3><br>
+  The Irrlicht Engine License<br>
+</h3>
+<p> <font face="Courier New, Courier, mono" size="2">Copyright (C) 2002-2003 Nikolaus 
+  Gebhardt</font></p>
+<p><font face="Courier New, Courier, mono" size="2"> This software is provided 
+  'as-is', without any express or implied warranty. In no event will the authors 
+  be held liable for any damages arising from the use of this software.</font></p>
+<p><font face="Courier New, Courier, mono" size="2"> Permission is granted to 
+  anyone to use this software for any purpose, including commercial applications, 
+  and to alter it and redistribute it freely, subject to the following restrictions:</font></p>
+<ol>
+  <li><font face="Courier New, Courier, mono" size="2"> The origin of this software 
+    must not be misrepresented; you must not claim that you wrote the original 
+    software. If you use this software in a product, an acknowledgment in the 
+    product documentation would be appreciated but is not required.</font></li>
+  <li><font face="Courier New, Courier, mono" size="2"> Altered source versions 
+    must be plainly marked as such, and must not be misrepresented as being the 
+    original software.</font></li>
+  <li><font face="Courier New, Courier, mono" size="2"> This notice may not be 
+    removed or altered from any source distribution.</font></li>
+</ol>
+<hr>
+<h2><a name="5"></a>5. Contact</h2>
+<p>If you have problems, questions or suggestions, please visit the <br>
+  official homepage of the Irrlicht Engine:<br>
+  <br>
+  <a href="http://irrlicht.sourceforge.net" target="_blank">http://irrlicht.sourceforge.net</a><br>
+  <br>
+  You will find forums, bugtrackers, patches, tutorials, and other stuff<br>
+  which will help you out.<br>
+  <br>
+  If want to contact the author of the engine, please send an email to:<br>
+  <br>
+  <a href="mailto:niko@code3d.com">niko@code3d.com</a></p>
+<p><br>
+</p>
+<hr> 
+<address style="align: right;"><small> </small></address>
+<table width="100%" border="0" cellspacing="0" cellpadding="2">
+  <tr> 
+    <td width="0"> 
+      <div align="left"><small><a href="http://www.irrlicht.sourceforge.net" target="_blank"><img src="media/irrlichtlogo.jpg" alt="The Irrlicht Engine" align="middle" border=0 width=88 height=31></a></small></div>
+    </td>
+    <td width="100%"> 
+      <div align="left"><small>The <a href="http://irrlicht.sourceforge.net" target="_blank">Irrlicht 
+        Engine</a> &copy; 2003 by N.Gebhardt</small></div>
+    </td>
+  </tr>
+</table>
+<address style="align: right;"></address>
+</body>
+</html>
