@@ -68,6 +68,19 @@ void CPakFile::SearchDirectory(const char* name)
                     if (tmp[tmp.size() - 1] != '/') {
                         tmp += "/";
                     }
+                    
+                    sFileTableEntry* tmpFT = new sFileTableEntry();
+                    tmpFT->dwFileSize = 0;
+                    tmpFT->dwOffset = 0;
+                    const char* p = getRelativePath(m_szFolderPath, tmp.c_str());
+                    if (strlen(p) >= FILE_NAME_LEN) {
+                        printf("ERROR:file name longer than %d,%s\n",FILE_NAME_LEN,p);
+                        _hasErr = true;
+                        return;
+                    }
+                    strcpy(tmpFT->szFileName,p);
+                    ALL_FILES.push_back(*tmpFT);
+                    
                     //printf("%s -> :%s\n",tmp.c_str(),getRelativePath("/Users/lingyun/projects/osx/Pak/test/", tmp.c_str()));
                     SearchDirectory(tmp.c_str());   
                 } else if(S_ISREG(info.st_mode))
@@ -83,6 +96,7 @@ void CPakFile::SearchDirectory(const char* name)
                     }
                     strcpy(tmp->szFileName,p);
                     ALL_FILES.push_back(*tmp);
+                    std::string kk = tmp->szFileName;
                 }
                 else
                 {

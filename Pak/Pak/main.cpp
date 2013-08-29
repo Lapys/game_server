@@ -34,8 +34,8 @@ int main(int argc, const char * argv[])
         help(myName.c_str());
         return 1;
     }
-    string dir = "/Users/lingyun/projects/osx/trunk/";
-    string pakfile = "/Users/lingyun//test_new.pak";
+    string dir = "/Users/lingyun/projects/IOS/irrlicht/texturepacker/pak/";
+    string pakfile = "/Users/lingyun/projects/IOS/irrlicht/data/res.pak";
     if (argc == 3) {
         dir = argv[1];
         pakfile = argv[2];
